@@ -1,0 +1,142 @@
+body {
+    all: unset;
+    font-family: 'Arial', sans-serif;
+    background-image: url('../images/floor.png');
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.main {
+    position: relative;
+    padding: 1rem;
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #000000;
+    border-bottom: #ccc solid 1px;
+    color: white;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+}
+
+nav button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+nav button:hover {
+    color: #ccc;
+}
+
+.selected {
+    text-decoration: underline;
+    color: #d3f8ff;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .logo {
+        margin-bottom: 1rem;
+    }
+    
+    nav {
+        width: 100%;
+        justify-content: space-around;
+    }
+    
+    nav button {
+        margin: 0;
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+.text {
+    color: white;
+    font-size: larger;
+}
+.section {
+    padding-inline: 30px;
+}
+.section h2{
+    color: aliceblue;
+}
+.section h1{
+    color: aliceblue;
+}
+
+
+.hidden {
+    display: none;
+}
+.toggle-title {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgba(240, 248, 255, 0.096);
+    font-size: 40px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.text-1 {
+    color: white;
+    font-size: 22px;
+}
+
+
+.link-1 {
+    text-decoration: underline;
+    font-weight: bold;
+    color: rgb(255, 179, 179);
+}
+
+#pet {
+    position: fixed; /* Crucial for overlaying without affecting layout */
+    width: 50px;     /* Size of the square */
+    height: 50px;
+    border-radius: 5px; /* Optional: make it a bit rounded */
+    /* Initial position will be set in JavaScript */
+}
+
+.pet {
+    background-image: url('../images/sprites.png'); /* Set the sprite image */
+    background-size: 500% 500%; /* Size of each individual sprite */
+    background-position: -30px 0px; /* Position the image */
+   
+}
+
+.pillow {
+    margin: 30px;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    width: 58px;
+    height: 58px;
+    background-image: url('../images/pillow.png'); /* Set the sprite image */
+
+}
