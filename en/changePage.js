@@ -5,42 +5,6 @@ let contactBtn = document.getElementById('contactBtn');
 
 let main = document.getElementById('main');
 
-/*aboutBtn.addEventListener('click', () => {
-    main.textContent = '';
-    aboutBtn.classList.add('selected');
-    projectsBtn.classList.remove('selected');
-    blogBtn.classList.remove('selected');
-    contactBtn.classList.remove('selected');
-    window.location.href = 'index.html';
-});
-
-projectsBtn.addEventListener('click', () => {
-    main.textContent = '';
-    aboutBtn.classList.remove('selected');
-    projectsBtn.classList.add('selected');
-    blogBtn.classList.remove('selected');    
-    contactBtn.classList.remove('selected');
-    loadContent('projects.html');
-});
-
-blogBtn.addEventListener('click', () => {
-    main.textContent = '';
-    aboutBtn.classList.remove('selected');
-    projectsBtn.classList.remove('selected');
-    blogBtn.classList.add('selected');
-    contactBtn.classList.remove('selected');
-    loadContent('blog.html');
-});
-
-contactBtn.addEventListener('click', () => {
-    main.textContent = '';
-    aboutBtn.classList.remove('selected');
-    projectsBtn.classList.remove('selected');
-    blogBtn.classList.remove('selected');
-    contactBtn.classList.add('selected');
-    loadContent('contact.html');
-});*/
-
 
 
 function loadContent(file) {
@@ -68,7 +32,7 @@ async function setupNavigation() {
     projectsBtn.addEventListener('click', () => {
         body.style.overflowY = 'auto';
         removeCatElements();
-        loadMarkdownSection('section', '../notes/EN/projects.md');
+        loadMarkdownSection('section', '../notes/EN/Projects.md');
     });
 
     document.getElementById('blogBtn').addEventListener('click', () => {

@@ -30,7 +30,7 @@ async function setupNavigation() {
     projectsBtn.addEventListener('click', () => {
         body.style.overflowY = 'auto';
         removeCatElements();
-        loadMarkdownSection('section', '../notes/PT/projects.md');
+        loadMarkdownSection('section', '../notes/PT/Projects.md');
     });
 
     document.getElementById('blogBtn').addEventListener('click', () => {
