@@ -84,7 +84,7 @@ async function setupNavigation() {
         contactLi.ariaSelected = false;
         aboutLi.ariaSelected = false;
         removeCatElements();
-        loadMarkdownSection('section', '../notes/EN/projects.md');
+        loadMarkdownSection('section', '../notes/EN/Projects.md');
     });
 
     document.getElementById('blogBtn').addEventListener('click', () => {
