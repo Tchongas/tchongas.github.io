@@ -4,18 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Language Selection</title>
-    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/98.css">   
 </head>
-<body>
-    <div class="language-options">
-        <button class="language-button" onclick="selectLanguage('en')">
-            <div class="flag en-flag"></div>
-            <span class="language-name">English</span>
-        </button>
-        <button class="language-button" onclick="selectLanguage('pt')">
-            <div class="flag pt-flag"></div>
-            <span class="language-name">Português</span>
-        </button>
+<dv>
+    <div class="window " style="width: 700px">
+        <div class="title-bar">
+          <div class="title-bar-text">Language Selection</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body language-options">
+            <button class="default language-button" onclick="selectLanguage('en')">
+                <div class="flag en-flag"></div>
+                <span class="language-name">English</span>
+            </button>
+            <button class="default language-button" onclick="selectLanguage('pt')">
+                <div class="flag pt-flag"></div>
+                <span class="language-name">Português</span>
+            </button>
+        </div>
+        <div class="status-bar">
+            <p class="status-bar-field">Using 98.css</p>
+            <p class="status-bar-field">:3</p>
+            <p class="status-bar-field">CPU Usage: 14%</p>
+        </div>
     </div>
     
 

@@ -3,29 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thomas Bocalon PT-BR</title>
+    <title>Thomas Bocalon EN</title>
     <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/98.css">   
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tchongass/marko@1.1.0"></script>
 </head>
 <body id="body">
-    <header>
-        <div class="logo">Thomas</div>
-        <nav>
-            <button id="aboutBtn">Cat Playground</button>
-            <button id="projectsBtn">Projects</button>
-            <button id="blogBtn">Blog</button>
-            <button id="contactBtn">Find me</button>
-        </nav>
-    </header>
-
-    <main id="main" class="main">
-        <section class="section" id="section">
-            <p class="text-1">His name is Cheetos, take care of him.</p>
-        </section>
-        <div id="pillow" class="pillow cat-element"></div>
-    </main>
     <div id="pet" class="pet"></div>
+    <div class="main-window window" style="width: 90%">
+        <div class="title-bar">
+            <div class="title-bar-text">Thomas Bocalon</div>
+            <div class="title-bar-controls">
+            <button aria-label="X" class="minimize"></button>
+            <button aria-label="Any Text" class="maximize"></button>
+            <button aria-label="Any Text" class="close"></button>
+            </div>
+        </div>
+        
+        <menu role="tablist">
+            <li role="tab" id="aboutLi" aria-selected="true"><a href="#tabs" id="aboutBtn">Home</a></li>
+            <li role="tab" id="projectsLi" aria-selected="false"><a href="#tabs" id="projectsBtn">Projects</a></li>
+            <li role="tab" id="blogLi" aria-selected="false"><a href="#tabs" id="blogBtn">Blog</a></li>
+            <li role="tab" id="contactLi" aria-selected="false"><a href="#tabs" id="contactBtn">Contact</a></li>
+        </menu>
+            <div class="window" role="tabpanel">
+            <div class="size-fix window-body" id="window-body" style="overflow-x: hidden;">
+                <main id="main" class="main">
+                    <section class="section size-fix" id="section">
+                        <p class="text-1">His name is Cheetos, take care of him.</p>
+                    </section>
+                    <div id="pillow" class="pillow cat-element"></div>
+                </main>
+            </div>
+            </div>
+    </div>
+
+    
+    
     <script src="../scripts/pet/petMain.js"></script>
     <script src="markdownLoader.js"></script>
     <script src="changePage.js"></script>

@@ -1,17 +1,10 @@
 body {
     all: unset;
     font-family: 'Arial', sans-serif;
-    background-image: url('../images/floor.png');
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-
-.main {
-    position: relative;
-    padding: 1rem;
+    background-color: #297c7d;
+    margin: 0;
     height: 100vh;
-    width: 100vw;
-    
+    overflow: hidden; /* prevent full-page scrolling */
 }
 
 header {
@@ -21,7 +14,6 @@ header {
     padding: 1rem 2rem;
     background-color: #000000;
     border-bottom: #ccc solid 1px;
-    color: white;
 }
 
 .logo {
@@ -37,7 +29,6 @@ nav {
 nav button {
     background: none;
     border: none;
-    color: white;
     padding: 0.5rem 1rem;
     margin-left: 1rem;
     cursor: pointer;
@@ -46,7 +37,7 @@ nav button {
 }
 
 nav button:hover {
-    color: #ccc;
+    /* add hover effects if needed */
 }
 
 .selected {
@@ -59,16 +50,16 @@ nav button:hover {
         flex-direction: column;
         padding: 1rem;
     }
-    
+
     .logo {
         margin-bottom: 1rem;
     }
-    
+
     nav {
         width: 100%;
         justify-content: space-around;
     }
-    
+
     nav button {
         margin: 0;
         padding: 0.5rem;
@@ -77,23 +68,22 @@ nav button:hover {
 }
 
 .text {
-    color: white;
     font-size: larger;
 }
+
 .section {
     padding-inline: 30px;
-}
-.section h2{
-    color: aliceblue;
-}
-.section h1{
-    color: aliceblue;
+    overflow: auto;
+    box-sizing: border-box;
 }
 
+.section h2 {}
+.section h1 {}
 
 .hidden {
     display: none;
 }
+
 .toggle-title {
     border-radius: 5px;
     padding: 10px;
@@ -104,30 +94,28 @@ nav button:hover {
 }
 
 .text-1 {
-    color: white;
     font-size: 22px;
 }
-
 
 .link-1 {
     text-decoration: underline;
     font-weight: bold;
-    color: rgb(255, 179, 179);
+    color: rgb(131, 71, 71);
 }
 
 #pet {
-    position: fixed; /* Crucial for overlaying without affecting layout */
-    width: 50px;     /* Size of the square */
+    position: fixed;
+    width: 50px;
     height: 50px;
-    border-radius: 5px; /* Optional: make it a bit rounded */
-    /* Initial position will be set in JavaScript */
+    border-radius: 5px;
+    z-index: 999;
 }
 
 .pet {
-    background-image: url('../images/sprites.png'); /* Set the sprite image */
-    background-size: 500% 500%; /* Size of each individual sprite */
-    background-position: -30px 0px; /* Position the image */
-   
+    background-image: url('../images/sprites.png');
+    background-size: 500% 500%;
+    background-position: -30px 0px;
+    z-index: 999;
 }
 
 .pillow {
@@ -137,6 +125,62 @@ nav button:hover {
     left: 50%;
     width: 58px;
     height: 58px;
-    background-image: url('../images/pillow.png'); /* Set the sprite image */
+    background-image: url('../images/pillow.png');
+}
 
+/* ---------------------------- */
+/*           WINDOW             */
+/* ---------------------------- */
+
+.main-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 90vh;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow: hidden; /* prevent main-window from expanding */
+}
+
+.title-bar {
+    flex-shrink: 0;
+    height: 30px; /* adjust if needed */
+}
+
+menu[role="tablist"] {
+    flex-shrink: 0;
+    height: 30px; /* adjust as needed */
+    margin: 0;
+    padding: 0;
+}
+
+.window {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* prevent inner expansion */
+}
+
+.window-body {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.size-fix {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1;
+    overflow-y: auto; /* This is where the scrollbar will appear */
+    padding: 1rem;
+    box-sizing: border-box;
 }
